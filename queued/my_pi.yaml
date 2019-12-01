@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: foobar
+spec:
+  template:
+    spec:
+      containers:
+      - name: foobar
+        image: pi
+      restartPolicy: Never
+  backoffLimit: 1
