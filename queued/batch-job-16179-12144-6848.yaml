@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: batch-job-16179-12144-6848
+  namespace: jobs
+spec:
+  template:
+    spec:
+      containers:
+      - name: batch-job-16179-12144-6848
+        image: perl
+        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(200)"]
+      restartPolicy: Never
+  backoffLimit: 1
